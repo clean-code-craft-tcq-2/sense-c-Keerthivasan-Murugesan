@@ -1,7 +1,5 @@
 struct Stats{
-  int min;
-  int max;
-  int average;
+  float min, max, average;
 };
 struct Stats compute_statistics(const float* numberset, int setlength);
 
