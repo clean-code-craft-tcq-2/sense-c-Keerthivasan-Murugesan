@@ -8,15 +8,15 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
     s.min = 0;
     s.max = 0;
       
-    if(setlength == 0)
+    if((setlength == 0) || (numberset == 0) || (numberset == NULL))
     {
         s.average = NAN;
         s.min = NAN;
         s.max = NAN;
     }
     else
-    {
-        for (i=0; i++; i<setlength)
+    {      
+        for (i=0; i<setlength; i++)
         {
             s.average = s.average + numberset[i];
             if(numberset[i] < s.min) s.min = numberset[i];
